@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  max-width: 80em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aboutMe {
+  display: grid;
+  grid-template-rows: 20% 80%;
+  grid-template-columns: 20% 80%;
+  padding-top: 50px;
+}
+
+.aboutMeTitle {
+  justify-self: center;
+  grid-column: 2 / 3;
+}
+
+
+.aboutMeAvatar {
+  grid-row: 1 / 3;
+  grid-column: 1;
+  justify-self: center;
+  align-self: center;
+  height: auto;
+  max-width: 80%;
+}
+
+.aboutMeText {
+  align-self: center;
+  padding-left: 40px;
+  padding-right: 10px;
+}
+
+/* @media (max-width: 800px) {
+  .aboutMeAvatar {
+    max-width: 100px;
+  }
+   
+} */
