@@ -1,22 +1,42 @@
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
-.main {
+nav {
+  width: 100%;
+  min-height: 70px;
+}
+
+.topBarWrapper {
+  display: flex;
+  justify-content: space-between;
+  min-height: 70px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.topBarLinks {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.generalWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
+}
+
+.aboutMeWrapper, .projectsWrapper, .contactWrapper {
   max-width: 80em;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-.aboutMe {
+.aboutMeWrapper {
   display: grid;
   grid-template-rows: 20% 80%;
   grid-template-columns: 20% 80%;
@@ -44,9 +64,24 @@ nav {
   padding-right: 10px;
 }
 
-/* @media (max-width: 800px) {
-  .aboutMeAvatar {
-    max-width: 100px;
-  }
-   
-} */
+.contactBackground {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  background-color: rgb(233, 145, 218);
+}
+
+.contactWrapper {
+  display: flex;
+  justify-content: center;
+  width: 80em;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  padding: 40px;
+}
