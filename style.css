@@ -45,7 +45,7 @@ hr {
   left: 0px;
   top: 0px;
   height: 60vh;
-  width: 100vw;
+  width: 100%;
   z-index: -100;
 }
 
@@ -67,7 +67,7 @@ hr {
   align-content: center;
 }
 
-.aboutMeWrapper, .projectsWrapper, .contactWrapper {
+.aboutMeWrapper, .projectsWrapper, .contactWrapper{
   max-width: 80em;
 }
 
@@ -153,13 +153,14 @@ hr {
 }
 
 .skillTitle {
-  min-width: 100px;
+  min-width: 150px;
   font-size: 30px;
 }
 
 .chevron {
   height: 75px;
   max-width: 70px;
+  min-width: 30px;
   background-color: var(--shape-color);
   clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
 }
@@ -193,6 +194,7 @@ hr {
 .contactBackground {
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
   width: 100vw;
   background-color: rgb(233, 145, 218);
 }
@@ -200,14 +202,14 @@ hr {
 .contactWrapper {
   display: flex;
   justify-content: center;
-  width: 80em;
 }
 
 footer {
   display: flex;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   background-color: black;
   color: white;
-  padding: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
