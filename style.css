@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   background-color: rgb(216, 236, 230);
 }
 
@@ -18,7 +18,6 @@ nav {
 
 hr {
   width: 100%;
-  border-width: 5px;
   border-style: solid;
   border-color: rgb(155, 190, 170);
   margin-top: 20px;
@@ -31,6 +30,7 @@ hr {
   min-height: 70px;
   padding-left: 50px;
   padding-right: 50px;
+  padding-bottom: 50px;
 }
 
 .topBarLinks {
@@ -40,25 +40,17 @@ hr {
   gap: 30px;
 }
 
-.bgshapesWrapper {
+.trapezoid {
   position: absolute;
   left: 0px;
   top: 0px;
   height: 60vh;
   width: 100%;
   z-index: -100;
-}
-
-.trapezoid {
-  height: inherit;
   background-color: var(--shape-color);
   clip-path: polygon(50% max(70%, 300px), 100% 40%, 100% 0, 0 0, 0 42%);
 }
 
-.generalWrapper, .contactWrapper {
-  padding-left: 30px;
-  padding-right: 30px;
-}
 
 .generalWrapper {
   display: flex;
@@ -75,8 +67,9 @@ hr {
   display: grid;
   grid-template-rows: 20% auto 20%;
   grid-template-columns: 20% 80%;
-  padding-top: 50px;
   font-family: 'Lato', sans-serif;
+  background-color: white;
+  box-shadow: 6px 10px 5px rgb(109, 106, 106);
 }
 
 .aboutMeAvatar {
@@ -101,8 +94,6 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
-  box-shadow: 6px 10px 5px rgb(109, 106, 106);
 }
 
 .aboutMeText {
@@ -195,7 +186,7 @@ hr {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  width: 100vw;
+  width: auto;
   background-color: rgb(233, 145, 218);
 }
 
@@ -212,4 +203,55 @@ footer {
   color: white;
   padding-top: 40px;
   padding-bottom: 40px;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+
+  .aboutMeWrapper {
+    display: flex;
+    flex-direction: column;
+    min-width: 2em;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .aboutMeAvatar {
+    max-width: 150px;
+    padding-top: 20px
+  }
+
+  .aboutMeContentWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aboutMeText {
+    padding-left: 2em;
+    padding-right: 2em;
+    font-size: 1.25em;
+    text-align: center;
+  }
+
+  .skillTitle {
+    font-size: 2em;
+  }
+
+  .skill {
+
+  }
+}
+
+
+@media (max-width: 400px) {
+  .trapezoid {
+  }
+
+  .aboutMeWrapper {
+    align-self: center;
+    max-width: 20em;
+  }
+  
 }
