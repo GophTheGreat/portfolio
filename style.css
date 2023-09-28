@@ -9,6 +9,7 @@ body {
   justify-content: center;
   align-content: center;
   background-color: rgb(216, 236, 230);
+  margin: 0;
 }
 
 nav {
@@ -56,7 +57,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
 .aboutMeWrapper, .projectsWrapper, .contactWrapper{
@@ -140,7 +141,7 @@ hr {
   display: flex;
   flex-direction: row;
   align-items: center;
-  list-style: none;
+  list-style-type: none;
 }
 
 .skillTitle {
@@ -168,10 +169,6 @@ hr {
 
 .legacy {
   opacity: 0.5;
-}
-
-.skill2 {
-  opacity: 0.8;
 }
 
 .skill span {
@@ -223,11 +220,6 @@ footer {
     padding-top: 20px
   }
 
-  .aboutMeContentWrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
   .aboutMeText {
     padding-left: 2em;
     padding-right: 2em;
@@ -235,13 +227,36 @@ footer {
     text-align: center;
   }
 
+  .skillsWrapper {
+    justify-content: center;
+  }
+  
+  .skillsWrapper * {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .skillsWrapper ul {
+    display: grid;
+    grid-template-rows: 36px 120px;
+    grid-template-columns: repeat(auto-fill, minmax(auto, auto));
+    padding-inline-start: 0%;
+  }
+  
   .skillTitle {
-    font-size: 2em;
+    grid-column: 1 / -1;
   }
-
+  
+  .chevron {
+    display: none;
+  }
+  
   .skill {
-
+    grid-row-start: 2;
+    max-width: min-content;
+    justify-self: center;
   }
+
 }
 
 
