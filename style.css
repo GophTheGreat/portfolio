@@ -58,9 +58,11 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 
-.aboutMeWrapper, .projectsWrapper, .contactWrapper{
+.aboutMeWrapper, .skillsWrapper, .projectsWrapper, .contactWrapper{
+  align-self: center;
   max-width: 80em;
 }
 
@@ -123,36 +125,50 @@ hr {
   display: flex;
   font-family: 'Lato', sans-serif;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 80em;
 }
 
 .skillsWrapper h1 {
-  text-align: center;
   font-size: 36px;
   width: 100%;
 }
 
 .skillsWrapper * {
   text-align: center;
-  width: 100%;
 }
 
-.skillsWrapper ul {
+.skillList {
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.skillTitle {
+  padding: 1rem;
+  width:170px;
+  font-size: 30px;
+}
+
+.skillList ul {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   list-style-type: none;
-}
-
-.skillTitle {
-  min-width: 150px;
-  font-size: 30px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-inline-start: 0%;
 }
 
 .chevron {
   height: 75px;
-  max-width: 70px;
   min-width: 30px;
+  max-width: 70px;
   background-color: var(--shape-color);
   clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
 }
@@ -177,6 +193,38 @@ hr {
 
 .projectsWrapper {
   font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 5px solid black;
+  padding: 1rem;
+}
+
+.projectTitle {
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+}
+
+.projectImage {
+  max-height: 500px;
+  max-width: 100%;
+  flex: 1 1 5rem;
+  border: 5px solid blue;
+}
+
+.projectText {
+  align-self: flex-start;
+  flex: 1 1 5rem;
+  padding: 1rem;
+  font-size: larger;
 }
 
 .contactBackground {
@@ -227,34 +275,22 @@ footer {
     text-align: center;
   }
 
-  .skillsWrapper {
-    justify-content: center;
-  }
-  
-  .skillsWrapper * {
-    text-align: center;
-    width: 100%;
-  }
-  
-  .skillsWrapper ul {
-    display: grid;
-    grid-template-rows: 36px 120px;
-    grid-template-columns: repeat(auto-fill, minmax(auto, auto));
-    padding-inline-start: 0%;
-  }
-  
   .skillTitle {
-    grid-column: 1 / -1;
+    width: 100%;
+    text-decoration-line: underline;
   }
-  
+
+  .skillList {
+    flex-direction: column;
+  }
+
   .chevron {
     display: none;
   }
   
   .skill {
-    grid-row-start: 2;
-    max-width: min-content;
-    justify-self: center;
+    padding: 1rem;
+    flex: 1 1 5rem;
   }
 
 }
@@ -265,7 +301,6 @@ footer {
   }
 
   .aboutMeWrapper {
-    align-self: center;
     max-width: 20em;
   }
   

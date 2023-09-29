@@ -47,22 +47,24 @@
       <a id="Skills"></a>
       <div class="skillsWrapper">
         <h1>Skills</h1>
-        <ul>
+        <div class="skillList">
           <div class="skillTitle">Currently Proficient</div>
           <div class="chevron"></div>
-          <li class="skill"><span class="devicon-javascript-plain"></span>Javascript</li>
-          <li class="skill"><span class="devicon-html5-plain-wordmark"></span>HTML</li>
-          <li class="skill"><span class="devicon-css3-plain-wordmark"></span>CSS</li>
-          <li class="skill"></span>Mechabellum</li>
-          <li class="skill"></span>MWO</li>
-        </ul>
-        <ul>
+          <ul>
+            <li class="skill"><span class="devicon-javascript-plain"></span>Javascript</li>
+            <li class="skill"><span class="devicon-html5-plain-wordmark"></span>HTML</li>
+            <li class="skill"><span class="devicon-css3-plain-wordmark"></span>CSS</li>
+          </ul>
+        </div>
+        <div class="skillList">
           <div class="skillTitle">Previously Used</div>
           <div class="chevron"></div>
-          <li class="skill legacy"><span class="devicon-c-plain"></span>C</li>
-          <li class="skill legacy"><span class="devicon-cplusplus-plain"></span>C++</li>
-          <li class="skill legacy"><span class="devicon-python-plain"></span>Python</li>
-        </ul>
+          <ul>
+            <li class="skill legacy"><span class="devicon-c-plain"></span>C</li>
+            <li class="skill legacy"><span class="devicon-cplusplus-plain"></span>C++</li>
+            <li class="skill legacy"><span class="devicon-python-plain"></span>Python</li>
+          </ul>
+        </div>
       <div>
       </div>
 
@@ -74,11 +76,13 @@
       <div class="projectsWrapper"> 
 
         <h1>Projects</h1>
-        <div>
-          <h2>Project 1</h2>
-          <img src="" alt="">
-          <p>Talking about project 1 yadda yadda yadda. Praesent luctus, enim id porta pharetra, arcu dolor blandit enim, semper convallis felis est vitae arcu. Nam imperdiet, tortor nec ullamcorper luctus, ex purus lobortis massa, at gravida dolor nibh vitae ex.  </p>
-          <a  href="https://github.com/GophTheGreat" target="_blank" rel="noreferrer noopener">
+        <div class="project">
+          <h2 class="projectTitle">Etch-a-Sketch</h2>
+          <a href="https://gophthegreat.github.io/etch-a-sketch/" target="_blank" rel="noreferrer noopener">
+            <img class="projectImage" src="./assets/etch.png" alt="Etch a Sketch project (opens link in new tab)">
+          </a>
+          <p class="projectText">Talking about project 1 yadda yadda yadda. Praesent luctus, enim id porta pharetra, arcu dolor blandit enim, semper convallis felis est vitae arcu. Nam imperdiet, tortor nec ullamcorper luctus, ex purus lobortis massa, at gravida dolor nibh vitae ex.  </p>
+          <a  href="https://github.com/GophTheGreat/etch-a-sketch" target="_blank" rel="noreferrer noopener">
             <img class="projectsIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
           </a> 
           <a href="website.com">
@@ -146,4 +150,5 @@
   </footer>
 
 </body>
+<script src="main.js"></script>
 </html>
