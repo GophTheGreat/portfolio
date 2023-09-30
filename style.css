@@ -194,8 +194,11 @@ hr {
 .projectsWrapper {
   font-family: 'Lato', sans-serif;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-around;
+  gap: 20px;
 }
 
 .project {
@@ -203,8 +206,15 @@ hr {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  border: 5px solid black;
+  justify-content: center;
   padding: 1rem;
+  max-width: 500px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+}
+
+.projectsWrapper h1 {
+  width: 100vw;
+  text-align: center;
 }
 
 .projectTitle {
@@ -214,17 +224,56 @@ hr {
 }
 
 .projectImage {
-  max-height: 500px;
-  max-width: 100%;
+  height: auto;
+  max-width: 80%;
   flex: 1 1 5rem;
   border: 5px solid blue;
+  align-self: center;
+}
+
+.projectContent {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 60px max-content 60px;
+  flex: 1 1 5rem;
+  align-self: center;
+}
+
+.projectIcon {
+  margin: 10px;
+}
+
+.techsWrapper {
+  padding: 1rem;
+  display: flex;
+}
+
+.builtWith {
+  font-weight: 900;
+}
+
+.builtWithContent {
+  padding-left: 10px;
 }
 
 .projectText {
-  align-self: flex-start;
   flex: 1 1 5rem;
   padding: 1rem;
   font-size: larger;
+}
+
+.projectIconWrapper {
+  align-self: flex-end;
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.projectIcon {
+  height: 50px;
+  width: 50px;
 }
 
 .contactBackground {
@@ -293,6 +342,9 @@ footer {
     flex: 1 1 5rem;
   }
 
+  .project {
+    flex-direction: column;
+  }
 }
 
 
