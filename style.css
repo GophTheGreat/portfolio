@@ -1,5 +1,6 @@
 :root {
   --shape-color: rgb(165, 202, 194);
+  --content-color: rgb(217, 255, 240);
 }
 
 
@@ -71,7 +72,7 @@ hr {
   grid-template-rows: 20% auto 20%;
   grid-template-columns: 20% 80%;
   font-family: 'Lato', sans-serif;
-  background-color: white;
+  background-color: var(--content-color);
   box-shadow: 6px 10px 5px rgb(109, 106, 106);
 }
 
@@ -112,13 +113,14 @@ hr {
   justify-content: flex-end;
   grid-row: 3;
   grid-column: 2;
-  padding-right: 20px;
+  padding: 1rem;
 }
 
-.aboutMeIcon, .projectsIcon {
+.aboutMeIcon, .projectIcon, .contactIcon{
   height: auto;
   min-width: 50px;
   max-width: 50px;
+  color: black;
 }
 
 .skillsWrapper { 
@@ -128,6 +130,8 @@ hr {
   justify-content: space-evenly;
   width: 100%;
   max-width: 80em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: var(--content-color);
 }
 
 .skillsWrapper h1 {
@@ -197,8 +201,8 @@ hr {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
-  gap: 20px;
+  justify-content: space-evenly;
+  gap: 10px;
 }
 
 .project {
@@ -207,13 +211,14 @@ hr {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  max-width: 500px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+  max-width: 310px;
+  height: 590px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: var(--content-color);
 }
 
 .projectsWrapper h1 {
-  width: 100vw;
+  width: 100%;
   text-align: center;
 }
 
@@ -224,23 +229,19 @@ hr {
 }
 
 .projectImage {
-  height: auto;
-  max-width: 80%;
+  height: 250px;
+  max-width: 300px;
   flex: 1 1 5rem;
-  border: 5px solid blue;
   align-self: center;
+  object-fit: scale-down;
 }
 
 .projectContent {
   display: grid;
   height: 100%;
-  grid-template-rows: 60px max-content 60px;
+  grid-template-rows: 60px 130px 70px;
   flex: 1 1 5rem;
   align-self: center;
-}
-
-.projectIcon {
-  margin: 10px;
 }
 
 .techsWrapper {
@@ -272,8 +273,7 @@ hr {
 }
 
 .projectIcon {
-  height: 50px;
-  width: 50px;
+  margin: 10px;
 }
 
 .contactBackground {
@@ -286,7 +286,58 @@ hr {
 
 .contactWrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+}
+
+.contactTitle {
+  width: 100%;
+  font-size: 36px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.contactDetailWrapper {
+  width: 300px;
+}
+
+.contactDetail {
+  display: inline-block;
+}
+
+.contactIcon {
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.contactIcon:hover {
+  transition: color 0.3s ease, filter 0.3s ease;
+  /* transition: filter 0.3s ease; */
+  color: rgb(85, 85, 81);
+}
+
+.contactIcon:hover img {
+  fill: rgb(228, 47, 41);
+  filter: invert(60%) sepia(0%) saturate(0%) hue-rotate(200deg) brightness(90%) contrast(90%);}
+
+.test {
+  transition: color 0.3s ease;
+  fill: black;
+  height: 150px;
+  color: black;
+}
+.test:hover {
+  fill: red;
+}
+
+
+.contactForm {
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
 }
 
 footer {

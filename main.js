@@ -1,7 +1,5 @@
 // // style Skill grid
-
 // console.log('helloWorld')
-
 // const ulArray = document.querySelectorAll('.skillsWrapper ul')
 // const mediaQuery = window.matchMedia('(max-width: 800px)')
 
