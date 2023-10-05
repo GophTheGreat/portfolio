@@ -1,6 +1,6 @@
 :root {
   --shape-color: rgb(165, 202, 194);
-  --content-color: rgb(217, 255, 240);
+  --content-color: rgb(227, 255, 244);
 }
 
 
@@ -14,6 +14,8 @@ body {
 }
 
 nav {
+  display: flex;
+  justify-content: center;
   width: 100%;
   min-height: 70px;
 }
@@ -29,17 +31,23 @@ hr {
 .topBarWrapper {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   min-height: 70px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 50px;
+  width: 70em;
+  margin: 1rem;
 }
 
-.topBarLinks {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 30px;
+.topBarLink {
+  font-family: 'Lato', sans-serif;
+  font-size: 26px;
+  text-decoration: none;
+  font-weight: 900;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.topBarLink:hover {
+  color: rgb(85, 85, 81);
 }
 
 .trapezoid {
@@ -122,6 +130,13 @@ hr {
   max-width: 50px;
   color: black;
 }
+
+.aboutMeIcon:hover, .projectIcon:hover, .contactIcon:hover {
+  transition: color 0.3s ease, filter 0.3s ease;
+  color: rgb(85, 85, 81);
+  filter: invert(60%) sepia(0%) saturate(0%) hue-rotate(200deg) brightness(90%) contrast(90%);
+}
+
 
 .skillsWrapper { 
   display: flex;
@@ -211,7 +226,7 @@ hr {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  max-width: 310px;
+  width: 310px;
   height: 590px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: var(--content-color);
@@ -281,7 +296,7 @@ hr {
   justify-content: center;
   box-sizing: border-box;
   width: auto;
-  background-color: rgb(233, 145, 218);
+  background-color: rgb(241, 255, 254);
 }
 
 .contactWrapper {
@@ -299,12 +314,9 @@ hr {
   text-align: center;
 }
 
-.contactDetailWrapper {
-  width: 300px;
-}
-
 .contactDetail {
   display: inline-block;
+  margin: 1rem;
 }
 
 .contactIcon {
@@ -312,39 +324,13 @@ hr {
   vertical-align: middle;
 }
 
-.contactIcon:hover {
-  transition: color 0.3s ease, filter 0.3s ease;
-  /* transition: filter 0.3s ease; */
-  color: rgb(85, 85, 81);
-}
-
-.contactIcon:hover img {
-  fill: rgb(228, 47, 41);
-  filter: invert(60%) sepia(0%) saturate(0%) hue-rotate(200deg) brightness(90%) contrast(90%);}
-
-.test {
-  transition: color 0.3s ease;
-  fill: black;
-  height: 150px;
-  color: black;
-}
-.test:hover {
-  fill: red;
-}
-
-
-.contactForm {
-  justify-self: flex-end;
-  display: flex;
-  flex-direction: column;
-  justify-items: flex-start;
-}
-
 footer {
   display: flex;
   justify-content: center;
   width: 100%;
   background-color: black;
+  font-family: 'Lato', sans-serif;
+  font-size: 26px;
   color: white;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -396,13 +382,14 @@ footer {
   .project {
     flex-direction: column;
   }
+
+  .contactWrapper {
+    justify-content: center;
+  }
 }
 
 
 @media (max-width: 400px) {
-  .trapezoid {
-  }
-
   .aboutMeWrapper {
     max-width: 20em;
   }
