@@ -394,4 +394,13 @@ footer {
     max-width: 20em;
   }
   
+  .topBarLink {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 900;
+    color: black;
+    transition: color 0.3s ease;
+  }
+
 }
