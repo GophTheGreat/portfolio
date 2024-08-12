@@ -1,6 +1,7 @@
 :root {
   --shape-color: rgb(165, 202, 194);
   --content-color: rgb(227, 255, 244);
+  --link-color: rgb(2, 81, 88);
 }
 
 
@@ -11,6 +12,10 @@ body {
   align-content: center;
   background-color: rgb(216, 236, 230);
   margin: 0;
+}
+
+.customLink {
+  color: var(--link-color);
 }
 
 nav {
@@ -40,9 +45,8 @@ hr {
 .topBarLink {
   font-family: 'Lato', sans-serif;
   font-size: 26px;
-  text-decoration: none;
+  text-decoration: underline;
   font-weight: 900;
-  color: black;
   transition: color 0.3s ease;
 }
 
@@ -128,10 +132,10 @@ hr {
   height: auto;
   min-width: 50px;
   max-width: 50px;
-  color: black;
+  filter: invert(22%) sepia(84%) saturate(945%) hue-rotate(148deg) brightness(86%) contrast(98%);
 }
 
-.aboutMeIcon:hover, .projectIcon:hover, .contactIcon:hover {
+.aboutMeIcon:hover, .projectIcon:hover, .contactIcon:hover, .customLink:hover{
   transition: color 0.3s ease, filter 0.3s ease;
   color: rgb(85, 85, 81);
   filter: invert(60%) sepia(0%) saturate(0%) hue-rotate(200deg) brightness(90%) contrast(90%);
@@ -291,6 +295,10 @@ hr {
   margin: 10px;
 }
 
+.resumeTitle {
+  font-family: 'Lato', sans-serif;
+}
+
 .contactBackground {
   display: flex;
   justify-content: center;
@@ -305,6 +313,7 @@ hr {
   flex-wrap: wrap;
   font-family: 'Lato', sans-serif;
   width: 100%;
+  padding: 10px 10px;
 }
 
 .contactTitle {
@@ -312,6 +321,8 @@ hr {
   font-size: 36px;
   flex-grow: 1;
   text-align: center;
+  margin-block-start: 15px;
+  margin-block-end: 0px;
 }
 
 .contactDetail {
